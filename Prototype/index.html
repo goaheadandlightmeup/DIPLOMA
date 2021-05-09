@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Библиотека стандартных деталей</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <img src="icons/politech.png" width="20%">
+  <br>
+  <script>
+    function myFunction() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("3d");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("p")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+    </script>
+    <br>
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Поиск">
+<ul class="tabs" role="tablist" id="3d">
+    <li>
+        <input type="radio" name="tabs" id="tab1"  />
+        <label for="tab1" 
+               role="tab" 
+               aria-selected="true" 
+               aria-controls="panel1" 
+               tabindex="0">Болты</label>  
+        <div id="tab-content1" 
+             class="tab-content" 
+             role="tabpanel" 
+             aria-labelledby="description" 
+             aria-hidden="false">
+             <p>Болты</p>
+</div>
+</body>   
+ </div>
+    </li>
+    <li>
+        <input type="radio" name="tabs" id="tab2" checked/>
+        <label for="tab2"
+               role="tab" 
+               aria-selected="false" 
+               aria-controls="panel2" 
+               tabindex="0">Гайки</label>
+        <div id="tab-content2" 
+             class="tab-content"
+             role="tabpanel" 
+             aria-labelledby="specification" 
+             aria-hidden="true">
+<div class="thumb">
+      
+       
+        <div class="img-item">
+          <div class="thumbnail">
+            <a>
+          <div class="caption">
+            <img src="icons/gaika.png" style="width:50%;">
+            <p><a href="paramgaika.html">Гайка <br> ГОСТ 10605-94</a></p>
+             </div>
+        </a>
+      </div>
+        </div>
+        <div class="img-item">
+          <div class="thumbnail">
+            <a>
+          <div class="caption">
+            <img src="icons/gaika.png" style="width:50%;">
+            <p><a href="paramgaika.html">Гайка ГОСТ <br> 10605-94</a></p>
+             </div>
+        </a>
+      </div>
+        </div>
+    </li>
+    <li>
+      <input type="radio" name="tabs" id="tab3" />
+      <label for="tab3"
+             role="tab" 
+             aria-selected="false" 
+             aria-controls="panel3" 
+             tabindex="0">Роликовые подшипники</label>
+      <div id="tab-content3" 
+           class="tab-content"
+           role="tabpanel" 
+           aria-labelledby="specification" 
+           aria-hidden="true">
+           <p>Роликовые подшипники</p>
+      </div>
+  </li>
+  <li>
+    <input type="radio" name="tabs" id="tab4" />
+    <label for="tab4"
+           role="tab" 
+           aria-selected="false" 
+           aria-controls="panel4" 
+           tabindex="0">Шариковые подшипники</label>
+    <div id="tab-content4" 
+         class="tab-content"
+         role="tabpanel" 
+         aria-labelledby="specification" 
+         aria-hidden="true">
+         <p>Шариковые подшипники</p>
+      <!-- <div class="thumb"> -->
+        <!-- <div class="img-item">
+          <div class="thumbnail">
+            <a>
+          <div class="caption">
+            <img src="icons/bear.png" style="width:50%;">
+            <input hidden="true" id='fileinput' type='text' size='75' value="/Users/mashka/Library/Application Support/Autodesk/Autodesk Fusion 360/API/AddIns/Prototype/bearings/Untitled.f3d"/>
+        <br>
+            <p type='button' onclick='window.location.href = "fusion360://command=insert&file=" + encodeURIComponent(document.getElementById("fileinput").value)'>Подшипник 116000 <br> ГОСТ 8995-75</p> <br /><br />
+          </div>
+        </a>
+      </div>
+        </div> -->
+        <!-- <div class="img-item">
+          <div class="thumbnail">
+            <a>
+          <div class="caption">
+            <img src="icons/bear.png" style="width:60%;">
+            <input hidden="true" id='fileinput' type='text' size='75' value="/Users/mashka/Library/Application Support/Autodesk/Autodesk Fusion 360/API/AddIns/Prototype/bearings/Untitled.f3d"/>
+        <br>
+            <p type='button' onclick='window.location.href = "fusion360://command=insert&file=" + encodeURIComponent(document.getElementById("fileinput").value)'>Подшипник 116000 <br> ГОСТ 8995-75</p> <br /><br />
+          </div>
+        </a>
+      </div>
+        </div>
+        <div class="img-item">
+          <div class="thumbnail">
+            <a>
+          <div class="caption">
+            <img src="icons/bear.png" style="width:60%;">
+            <input hidden="true" id='fileinput' type='text' size='75' value="/Users/mashka/Library/Application Support/Autodesk/Autodesk Fusion 360/API/AddIns/Prototype/bearings/Untitled.f3d"/>
+        <br>
+            <p type='button' onclick='window.location.href = "fusion360://command=insert&file=" + encodeURIComponent(document.getElementById("fileinput").value)'>Подшипник 116000 <br> ГОСТ 8995-75</p> <br /><br />
+          </div>
+        </a>
+      </div>
+        </div>
+        <div class="img-item">
+          <div class="thumbnail">
+            <a>
+          <div class="caption">
+            <img src="icons/bear.png" style="width:60%;">
+            <input hidden="true" id='fileinput' type='text' size='75' value="/Users/mashka/Library/Application Support/Autodesk/Autodesk Fusion 360/API/AddIns/Prototype/bearings/Untitled.f3d"/>
+        <br>
+            <p type='button' onclick='window.location.href = "fusion360://command=insert&file=" + encodeURIComponent(document.getElementById("fileinput").value)'>Подшипник 116000 <br> ГОСТ 8995-75</p> <br /><br />
+          </div>
+        </a>
+      </div>
+        </div>
+        <div class="img-item">
+          <div class="thumbnail">
+            <a>
+          <div class="caption">
+            <img src="icons/bear.png" style="width:60%;">
+            <input hidden="true" id='fileinput' type='text' size='75' value="/Users/mashka/Library/Application Support/Autodesk/Autodesk Fusion 360/API/AddIns/Prototype/bearings/Untitled.f3d"/>
+        <br>
+            <p type='button' onclick='window.location.href = "fusion360://command=insert&file=" + encodeURIComponent(document.getElementById("fileinput").value)'>Подшипник 116000 <br> ГОСТ 8995-75</p> <br /><br />
+          </div>
+        </a>
+      </div>
+        </div>
+        <div class="img-item">
+          <div class="thumbnail">
+            <a>
+          <div class="caption">
+            <img src="icons/bear.png" style="width:60%;">
+            <input hidden="true" id='fileinput' type='text' size='75' value="/Users/mashka/Library/Application Support/Autodesk/Autodesk Fusion 360/API/AddIns/Prototype/bearings/Untitled.f3d"/>
+        <br>
+            <p type='button' onclick='window.location.href = "fusion360://command=insert&file=" + encodeURIComponent(document.getElementById("fileinput").value)'>Подшипник 116000 <br> ГОСТ 8995-75</p> <br /><br />
+          </div> -->
+        <!-- </a> -->
+      <!-- </div> -->
+        </div>
+        </div>    
+    </div>
+</li>
+</ul>
+</body>
+</html>

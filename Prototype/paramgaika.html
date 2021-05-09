@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Библиотека стандартных деталей</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <img src="icons/politech.png" width="20%">
+  <br>
+
+<ul class="tabs" role="tablist" id="3d">
+    <li>
+        <input type="radio" name="tabs" id="tab1" checked />
+        <label for="tab1" 
+               role="tab" 
+               aria-selected="true" 
+               aria-controls="panel1" 
+               tabindex="0">Гайка ГОСТ 10605-94</label>  
+        <div id="tab-content1" 
+             class="tab-content" 
+             role="tabpanel" 
+             aria-labelledby="description" 
+             aria-hidden="false">
+             <img src="icons/gaika.png" width="150" height="350" style="float: left; margin-left: 80px;">
+                <div class="__select">
+                    <p style="margin-left: 440px">Описание резьбы</p>
+                  <div class="__select__content">
+                      <!-- в value укажи путь до детали -->
+                    <input hidden="true" id='fileinput' type='text' size='75' value="/Users/mashka/Library/Application Support/Autodesk/Autodesk Fusion 360/API/AddIns/Prototype/models/gaika.f3d"/>
+                    <input id="singleSelect0" class="__select__input" type="checkbox" name="singleSelect" checked />
+                    <label for="singleSelect0" class="__select__label" type='button' onclick='window.location.href = "fusion360://command=insert&file=" + encodeURIComponent(document.getElementById("fileinput").value)'>(М52)</label>
+                    <input id="singleSelect1" class="__select__input" type="checkbox" name="singleSelect" />
+                    <label for="singleSelect1" class="__select__label" type='button' onclick='window.location.href = "fusion360://command=insert&file=" + encodeURIComponent(document.getElementById("fileinput").value)'>(М52*3)</label>
+                    <input id="singleSelect2" class="__select__input" type="checkbox" name="singleSelect" disabled />
+                    <label for="singleSelect2" class="__select__label" type='button' onclick='window.location.href = "fusion360://command=insert&file=" + encodeURIComponent(document.getElementById("fileinput").value)'>M56</label>
+                    <input id="singleSelect3" class="__select__input" type="checkbox" name="singleSelect" />
+                    <label for="singleSelect3" class="__select__label" type='button' onclick='window.location.href = "fusion360://command=insert&file=" + encodeURIComponent(document.getElementById("fileinput").value)'>M56*4</label>
+                    <input id="singleSelect4" class="__select__input" type="checkbox" name="singleSelect" />
+                    <label for="singleSelect4" class="__select__label" type='button' onclick='window.location.href = "fusion360://command=insert&file=" + encodeURIComponent(document.getElementById("fileinput").value)'>M64</label>
+                    <input id="singleSelect5" class="__select__input" type="checkbox" name="singleSelect" />
+                    <label for="singleSelect5" class="__select__label" type='button' onclick='window.location.href = "fusion360://command=insert&file=" + encodeURIComponent(document.getElementById("fileinput").value)'>M64*4</label>
+                    <input id="singleSelect6" class="__select__input" type="checkbox" name="singleSelect" />
+                    <label for="singleSelect6" class="__select__label" type='button' onclick='window.location.href = "fusion360://command=insert&file=" + encodeURIComponent(document.getElementById("fileinput").value)'>M72*4</label>
+                    <input id="singleSelect7" class="__select__input" type="checkbox" name="singleSelect" />
+                    <label for="singleSelect7" class="__select__label" type='button' onclick='window.location.href = "fusion360://command=insert&file=" + encodeURIComponent(document.getElementById("fileinput").value)'>M72*6</label>
+                    <input id="singleSelect8" class="__select__input" type="checkbox" name="singleSelect" />
+                    <label for="singleSelect8" class="__select__label" type='button' onclick='window.location.href = "fusion360://command=insert&file=" + encodeURIComponent(document.getElementById("fileinput").value)'>(M76*4)</label>
+                    <input id="singleSelect9" class="__select__input" type="checkbox" name="singleSelect" />
+                    <label for="singleSelect9" class="__select__label" type='button' onclick='window.location.href = "fusion360://command=insert&file=" + encodeURIComponent(document.getElementById("fileinput").value)'>(M76*6)</label>
+                    <input id="singleSelect10" class="__select__input" type="checkbox" name="singleSelect" />
+                    <label for="singleSelect10" class="__select__label" type='button' onclick='window.location.href = "fusion360://command=insert&file=" + encodeURIComponent(document.getElementById("fileinput").value)'>M80*4</label>
+                    <input id="singleSelect11" class="__select__input" type="checkbox" name="singleSelect" />
+                    <label for="singleSelect11" class="__select__label" type='button' onclick='window.location.href = "fusion360://command=insert&file=" + encodeURIComponent(document.getElementById("fileinput").value)'>M80*6</label>
+                    <input id="singleSelect10" class="__select__input" type="checkbox" name="singleSelect" />
+                    <label for="singleSelect10" class="__select__label" type='button' onclick='window.location.href = "fusion360://command=insert&file=" + encodeURIComponent(document.getElementById("fileinput").value)'>M90*4</label>
+                    <input id="singleSelect11" class="__select__input" type="checkbox" name="singleSelect" />
+                    <label for="singleSelect11" class="__select__label" type='button' onclick='window.location.href = "fusion360://command=insert&file=" + encodeURIComponent(document.getElementById("fileinput").value)'>M90*6</label>
+                  </div>
+                </div>
+</div>
+</body>   
+ </div>
+    </li>
+</ul>
+</body>
+</html>

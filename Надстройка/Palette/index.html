@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <div class="tabs">
+        <!-- <input type="radio" name="inset" value="" id="tab_1" checked>
+        <label for="tab_1">Муфта упругая втулочно-пальцевая</label> -->
+ 
+        <input type="radio" name="inset" value="" id="tab_2" checked>
+        <label for="tab_2">Муфта фланцевая</label>
+
+        <div id="txt_2">
+            <table>
+                <tr>
+                    <td>
+                        <h3>
+                            <b>Муфта фланцевая ГОСТ 20761-96</b>
+                        </h3>
+
+                        <p>
+                            <b>Укажите исполнение:</b>
+                        </p>
+
+                        <p id="execution" >
+                            <input type="radio" name="execution" value="short" checked>для коротких концов валов <Br>
+                            <input type="radio" name="execution" value="long">для длинных концов валов <Br>
+                        </p>
+
+                        <hr class="hr-line">
+
+                        <p><b>Диаметр посадочного отверстия d, мм:</b></p>
+                        <p>
+                            <select name="exct" id="key">
+                                <option selected value="11" >11</option>
+                                <option value="12">12</option>
+                                <option value="14">14</option>
+                                <option value="16">16</option>
+                            </select>
+                        </p>
+
+                        <hr class="hr-line">
+
+                    </td>
+
+                    <td>
+                        <p>
+                            <img src="icons/flancDesign.png" class="fig">
+                        </p>
+                        <br>
+                    </td>
+                </tr>
+                <tr class="bord">
+                    <td> </td>
+                    <td>
+                        <button id="Click" onclick=btnClick();>Применить</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- <div id="txt_1">
+            <table>
+                <tr>
+                    <td>
+                        <h3>
+                            <b>Выберите тип проектируемой муфты:</b>
+                        </h3>
+
+                        <p>
+                            <b>Исполнение:</b>
+                        </p>
+
+                        <p id="shaftend" >
+                            <input type="radio" name="shaftend" value="short" checked>на короткие концы валов <Br>
+                            <input type="radio" name="shaftend" value="long">на длинные концы валов <Br>
+                            
+                        </p>
+
+                        <hr class="hr-line">
+
+                        <p><b>Диаметр посадочного отверстия d, мм:</b></p>
+                        <p>
+                            <select name="shaftd" id="key">
+                                <option selected value="9" >9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="14">14</option>
+                                <option value="16">16</option>
+                            </select>
+                        </p>
+
+                        <hr class="hr-line">
+
+                        <p>
+                            <b>Отверстие для вала:</b>
+                        </p>
+
+                        <p id="shafthole">
+                            <input type="radio" name="shafthole" value="cylindrical" checked> цилиндрическое <br>
+                            <input type="radio" name="shafthole" value="conical"> коническое <br>
+                        </p>
+
+                        <p>
+                            <b>Конусность: </b> 1:10
+                        </p>
+                    </td>
+
+                    <td>
+                        <p>
+                            <img src="icons/drawing.png" class="fig">
+                        </p>
+                        <br>
+                    </td>
+                </tr>
+                <tr class="bord">
+                    <td> </td>
+                    <td>
+                        <button>Ок</button>
+                        <button id="Click" onclick=btnClick();>Применить</button>
+                    </td>
+                </tr>
+            </table> 
+
+
+        </div>-->
+    </div>
+
+</body>
+
+<script>
+
+    function btnClick(){ //функция по нажатию на "Применить"
+        var key = document.getElementById('key').value; 
+
+        //проверка выбранного конца вала, выбор исполнения
+        var executions = document.getElementsByName('execution');
+        var execution;
+        for(var i = 0; i < executions.length; i++){
+            if(executions[i].checked){
+                execution = executions[i].value;
+            }
+        }
+
+        //список метки и аргументов для py
+        var sendStrJson = {
+                action : "click",
+                arguments : {key:key, execution:execution}
+            };
+        adsk.fusionSendData('send', JSON.stringify(sendStrJson));
+    }
+</script>
+
+</html>
